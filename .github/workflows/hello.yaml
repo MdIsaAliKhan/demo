@@ -4,12 +4,13 @@ on:
   push:
     branches:
       - main
+    
     workflows_dispatch:
 
 jobs:
   my_job:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
