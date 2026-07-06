@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GameVerse Pro Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{
+background:radial-gradient(circle at top,#312e81,#111827 35%,#030712 100%);
+color:#fff;overflow-x:hidden}
+body:before{
+content:"";position:fixed;inset:0;
+background:
+radial-gradient(circle at 20% 20%,rgba(34,211,238,.12),transparent 25%),
+radial-gradient(circle at 80% 10%,rgba(139,92,246,.15),transparent 30%),
+radial-gradient(circle at 70% 80%,rgba(59,130,246,.12),transparent 30%);
+pointer-events:none}
+.app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+.sidebar{
+background:rgba(15,23,42,.82);
+backdrop-filter:blur(18px);
+border-right:1px solid rgba(255,255,255,.08);
+padding:26px}
+.logo{font-size:30px;font-weight:700;color:#67e8f9;margin-bottom:30px}
+.logo i{color:#8b5cf6}
+.nav a{
+display:flex;align-items:center;gap:14px;
+padding:14px 16px;
+margin:8px 0;
+text-decoration:none;
+color:#dbeafe;
+border-radius:14px;
+transition:.35s}
+.nav a:hover,.active{
+background:linear-gradient(90deg,#2563eb,#7c3aed);
+transform:translateX(6px)}
+.main{padding:28px}
+.top{
+display:flex;justify-content:space-between;align-items:center;
+margin-bottom:25px}
+.search{
+width:480px;
+background:rgba(255,255,255,.07);
+border:1px solid rgba(255,255,255,.08);
+padding:15px 18px;
+border-radius:18px;
+color:#fff}
+.profile{
+display:flex;gap:18px;align-items:center}
+.avatar{
+width:48px;height:48px;border-radius:50%;
+background:linear-gradient(135deg,#22d3ee,#8b5cf6)}
+.hero{
+background:linear-gradient(135deg,#2563eb,#7c3aed);
+border-radius:26px;
+padding:35px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 25px 60px rgba(0,0,0,.35)}
+.hero h1{font-size:42px}
+.hero button{
+margin-top:18px;
+padding:14px 28px;
+border:none;border-radius:30px;
+background:#fff;color:#111827;font-weight:700}
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+margin:25px 0}
+.card{
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.08);
+padding:22px;
+border-radius:22px;
+transition:.35s}
+.card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.card i{font-size:28px;color:#67e8f9}
+.card h2{margin:10px 0}
+.grid{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:22px}
+.panel{
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.08);
+border-radius:22px;
+padding:22px}
+.games{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+.game{
+border-radius:20px;overflow:hidden;
+background:#111827}
+.cover{
+height:170px;
+background:linear-gradient(135deg,#06b6d4,#8b5cf6);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:56px}
+.info{padding:18px}
+.progress{height:8px;background:#334155;border-radius:10px;margin:12px 0}
+.bar{height:100%;background:linear-gradient(90deg,#22d3ee,#8b5cf6);border-radius:10px}
+.play{
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
+border-radius:20px;
+background:#2563eb}
+.item{
+display:flex;
+justify-content:space-between;
+padding:14px 0;
+border-bottom:1px solid rgba(255,255,255,.08)}
+.badge{
+padding:5px 12px;border-radius:20px;
+background:#14532d;color:#86efac}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<div class="logo"><i class="fa-solid fa-gamepad"></i> GameVerse</div>
+<div class="nav">
+<a class="active"><i class="fa-solid fa-house"></i> Dashboard</a>
+<a><i class="fa-solid fa-rocket"></i> Discover</a>
+<a><i class="fa-solid fa-gamepad"></i> Library</a>
+<a><i class="fa-solid fa-trophy"></i> Achievements</a>
+<a><i class="fa-solid fa-users"></i> Friends</a>
+<a><i class="fa-solid fa-medal"></i> Esports</a>
+<a><i class="fa-solid fa-chart-line"></i> Analytics</a>
+<a><i class="fa-solid fa-gear"></i> Settings</a>
+</div>
+</aside>
+
+<main class="main">
+<div class="top">
+<input class="search" placeholder="Search games, players, tournaments...">
+<div class="profile">
+<i class="fa-regular fa-bell fa-xl"></i>
+<div class="avatar"></div>
+</div>
+</div>
+
+<div class="hero">
+<div>
+<h1>Welcome Back, Gamer 🎮</h1>
+<p>Continue your journey, track achievements, and dominate the leaderboard.</p>
+<button>Launch Game</button>
+</div>
+<i class="fa-solid fa-dragon" style="font-size:120px;opacity:.25"></i>
+</div>
+
+<div class="cards">
+<div class="card"><i class="fa-solid fa-gamepad"></i><h2>148</h2><p>Games Owned</p></div>
+<div class="card"><i class="fa-solid fa-clock"></i><h2>2,945h</h2><p>Hours Played</p></div>
+<div class="card"><i class="fa-solid fa-trophy"></i><h2>68</h2><p>Trophies</p></div>
+<div class="card"><i class="fa-solid fa-fire"></i><h2>12 Day</h2><p>Winning Streak</p></div>
+</div>
+
+<div class="grid">
+<div class="panel">
+<h2>Continue Playing</h2>
+<div class="games">
+<div class="game">
+<div class="cover"><i class="fa-solid fa-ghost"></i></div>
+<div class="info"><h3>Cyber Legends</h3><div class="progress"><div class="bar" style="width:82%"></div></div><span class="play">▶ Play</span></div>
+</div>
+<div class="game">
+<div class="cover" style="background:linear-gradient(135deg,#16a34a,#22c55e)"><i class="fa-solid fa-skull"></i></div>
+<div class="info"><h3>Shadow Arena</h3><div class="progress"><div class="bar" style="width:46%"></div></div><span class="play">▶ Play</span></div>
+</div>
+</div>
+</div>
+
+<div class="panel">
+<h2>Player Hub</h2>
+<div class="item"><span>Rank</span><strong>Diamond</strong></div>
+<div class="item"><span>Friends Online</span><strong>27</strong></div>
+<div class="item"><span>Clan</span><strong>Night Owls</strong></div>
+<div class="item"><span>Next Tournament</span><span class="badge">8 PM</span></div>
+<div class="item"><span>Battle Pass</span><strong>79%</strong></div>
+</div>
+</div>
+
+</main>
+</div>
+</body>
+</html>

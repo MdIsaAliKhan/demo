@@ -1,0 +1,10 @@
+name: deploy
+on: push
+job:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: "hello"
+        run: echo "complete the first deployment"
+          
