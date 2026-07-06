@@ -17,6 +17,12 @@ jobs:
       - name: list fil
         run: ls
 
+      - name: show datess
+        run: date
+
+      - name: git version
+        run: git --version
+
       - name: Print hello message
         run: echo "Hello, world!"
 
