@@ -11,6 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: checkout repository 
+        uses: actions/checkout@v4
+
       - name: Print hello message
         run: echo "Hello, world!"
+
+    
           
