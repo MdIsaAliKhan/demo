@@ -1,15 +1,16 @@
 name: deploy
+
 on: 
   push:
     branches:
       - main
+    workflow-dispatch:
 
-  workflow-dispatch:
 jobs:
-  deploy:
+  my-job:
     runs-on: ubuntu-latest
+    
     steps:
-      
       - name: "hello"
         run: echo "complete the first deployment"
           
